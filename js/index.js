@@ -46,6 +46,6 @@ function displayCommits() {
   const commitsList = '<ul>' +
     commits.map(commit => {
       '<li><strong>' +
-      
+
     })
 }
