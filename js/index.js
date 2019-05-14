@@ -13,7 +13,7 @@ function getRepositories() {
 
 function displayRepositories() {
   const repos = JSON.parse(this.responseText);
-  console.log(repos)
+
   // const repoList = '<ul>' +
   //   repos.map(repo => {
   //     const
