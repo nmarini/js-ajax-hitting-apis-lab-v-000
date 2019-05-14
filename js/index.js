@@ -59,7 +59,7 @@ function displayCommits() {
 
 function getBranches(el) {
   const repoName = el.dataset.repository;
-  const req = new HMLHttpRequest();
+  const req = new XMLHttpRequest();
   const uri = rootURL + '/repos/' + el.dataset.username + '/' + repoName + '/branches';
   req.addEventListener('load', displayBranches);
   req.open('GET', uri)
