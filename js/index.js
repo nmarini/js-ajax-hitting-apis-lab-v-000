@@ -35,7 +35,7 @@ function displayRepositories() {
 function getCommits(el) {
   const repoName = el.dataset.repo;
   const req = new HMLHttpRequest();
-  const uri = rootURL + '/repos/' + repoName + el.dataset.username + '/commits'
+  const uri = rootURL + '/repos/' + el.dataset.username + '/' + repoName + '/commits';
   req.addEventListener('load', displayCommits);
   req.open('GET', uri)
 }
