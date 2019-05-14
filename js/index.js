@@ -5,7 +5,7 @@ function getRepositories() {
   const uri = rootURL + '/users/' + name + '/repos'
   const req = new XMLHttpRequest();
 
-  req.addEventListener('load', displayRepositories
+  req.addEventListener('load', displayRepositories)
   req.open('GET', uri);
   req.send();
 
