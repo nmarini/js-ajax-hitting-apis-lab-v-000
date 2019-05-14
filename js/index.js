@@ -14,6 +14,7 @@ function getRepositories() {
 function displayRepositories() {
   const repos = JSON.parse(this.responseText);
   console.log(repos)
+  debugger
   // const repoList = '<ul>' +
   //   repos.map(repo => {
   //     const
