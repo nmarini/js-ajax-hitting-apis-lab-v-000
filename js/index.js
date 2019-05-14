@@ -33,7 +33,7 @@ function displayRepositories() {
 }
 
 function getCommits(el) {
-  const repoName = el.dataset.repo;
+  const repoName = el.dataset.repository;
   const req = new HMLHttpRequest();
   const uri = rootURL + '/repos/' + el.dataset.username + '/' + repoName + '/commits';
   req.addEventListener('load', displayCommits);
@@ -53,4 +53,13 @@ function displayCommits() {
     }).join('') +
     '</ul>';
   document.getElementById('commits').innerHTML = commitsList;
+}
+
+function getBranches(el) {
+  const repoName = el.dataset.repository;
+  const req = new HMLHttpRequest();
+  const uri = rootURL + '/repos/' + el.dataset.username + '/' + repoName + '/commits';
+  req.addEventListener('load', displayCommits);
+  req.open('GET', uri)
+  req.send();
 }
