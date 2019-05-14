@@ -4,11 +4,11 @@ const rootURL = 'https://api.github.com';
 //   const name = document.getElementById('username').value;
 //   const req = new XMLHttpRequest();
 //   const uri = rootURL + '/users/' + name + '/repos'
-// 
+//
 //   req.addEventListener('load', displayRepositories())
 //   req.open('GET', uri);
 //   req.send();
-// 
+//
 // }
 function getRepositories() {
   const name = document.getElementById('username').value;
@@ -19,7 +19,7 @@ function getRepositories() {
   xhr.send();
   return false;
 }
-// 
+//
 
 function displayRepositories() {
   const repos = JSON.parse(this.responseText);
