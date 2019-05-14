@@ -31,3 +31,11 @@ function displayRepositories() {
         '</ul>';
   document.getElementById('repositories').innerHTML = repoList;
 }
+
+function getCommits(el) {
+  const repoName = el.dataset.repo;
+  const req = new HMLHttpRequest();
+  const uri = rootURL + repoName + '/repos/' + el.dataset.username + '/commits'
+  req.addEventListener('load', displayCommits);
+  req.open('GET', uri)
+}
