@@ -38,4 +38,5 @@ function getCommits(el) {
   const uri = rootURL + '/repos/' + el.dataset.username + '/' + repoName + '/commits';
   req.addEventListener('load', displayCommits);
   req.open('GET', uri)
+  req.send();
 }
