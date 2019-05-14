@@ -40,3 +40,12 @@ function getCommits(el) {
   req.open('GET', uri)
   req.send();
 }
+
+function displayCommits() {
+  const commits = JSON.parse(this.responseText);
+  const commitsList = '<ul>' +
+    commits.map(commit => {
+      '<li><strong>' +
+      
+    })
+}
