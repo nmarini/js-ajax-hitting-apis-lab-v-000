@@ -67,13 +67,11 @@ function getBranches(el) {
 function displayBranches() {
   const branches = JSON.parse(this.responseText);
   const branchesList = '<ul>' +
-    branches.map(commit => {
-      '<li><strong>' +
-      branches.author.login +
-      '</strong> - ' +
-      branches.commit.message +
+    branches.map(branch => {
+      '<li>' +
+      branch.name +
       '</li>'
     }).join('') +
     '</ul>';
-  document.getElementById('branches').innerHTML = branchesList;
+  document.getElementById('details').innerHTML = branchesList;
 }
